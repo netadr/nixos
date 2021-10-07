@@ -5,7 +5,7 @@ let
 in {
   imports = [
     ./hardware-configuration.nix
-    nputs.nixos-hardware.nixosModules.common-pc-laptop-ssd
+    inputs.nixos-hardware.nixosModules.common-pc-laptop-ssd
   ];
 
   time.timeZone = "US/Eastern";

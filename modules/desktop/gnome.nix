@@ -20,9 +20,7 @@ in {
       gnome.gnome-terminal
       gnome.gnome-tweaks
       gnome.nautilus
-    ];
 
-    user.packages = with pkgs; [
       corefonts
       ubuntu_font_family
       noto-fonts

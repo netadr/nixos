@@ -7,6 +7,8 @@ in {
     [ inputs.home-manager.nixosModules.home-manager ]
     ++ _.mapModulesRec' ./modules import;
 
+  environment.variables.NIXPKGS_ALLOW_UNFREE = "1";
+
   # "nix flake check" bypasses, can be changed in the actual hosts
   # config, useful for testing
   fileSystems."/".device = lib.mkDefault "/dev/disk/by-label/root";

@@ -11,9 +11,10 @@ in {
   config = mkIf cfg.enable {
     home._.programs.vscode = {
       enable = true;
-      extensions = with pkgs; [
-        vscode-extensions.cpptools
-        vscode-extensions.python
+      extensions = with pkgs.vscode-extensions; [
+        ms-vscode.cpptools
+        ms-python.python
+	pkief.material-icon-theme
       ];
     };
   };
